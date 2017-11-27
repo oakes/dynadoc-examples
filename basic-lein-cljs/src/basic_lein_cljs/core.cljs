@@ -1,4 +1,4 @@
-(ns basic-lein.core
+(ns basic-lein-cljs.core
   (:require [reagent.core :as r]
             [dynadoc.core])
   (:require-macros [dynadoc.example :refer [defexample]]))

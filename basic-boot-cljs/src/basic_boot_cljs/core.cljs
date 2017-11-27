@@ -1,4 +1,4 @@
-(ns basic-boot.core
+(ns basic-boot-cljs.core
   (:require [reagent.core :as r])
   (:require-macros [dynadoc.example :refer [defexample]]))
 
