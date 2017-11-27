@@ -1,7 +1,6 @@
 (set-env!
   :source-paths #{"src"}
-  :dependencies '[[org.clojure/test.check "0.9.0" :scope "test"]
-                  [org.clojure/clojurescript "1.9.946"]
+  :dependencies '[[org.clojure/clojurescript "1.9.946" :scope "test"]
                   [dynadoc "1.0.0"]])
 
 (require
