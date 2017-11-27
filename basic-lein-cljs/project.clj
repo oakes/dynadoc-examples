@@ -5,7 +5,7 @@
                  [dynadoc "1.0.0"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[lein-cljsbuild "1.1.7"]
-            [dynadoc/lein-dynadoc "1.0.0-SNAPSHOT"]]
+            [dynadoc/lein-dynadoc "1.0.0"]]
   :cljsbuild {:builds [
                        {:source-paths ["src"]
                         :compiler {:output-to "resources/dynadoc-extend/main.js"
