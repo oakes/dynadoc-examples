@@ -12,13 +12,11 @@
   '[adzerk.boot-reload :refer [reload]]
   '[dynadoc.boot :refer [dynadoc]])
 
-(def dynadoc-port 5000)
-
 (deftask run-docs []
-  (set-env! :source-paths #{"src"} :resource-paths #{"dev-resources"})
+  (set-env! :resource-paths #{"dev-resources"})
   (comp
     (watch)
     (reload :asset-path "dynadoc-extend")
     (cljs)
-    (dynadoc :port dynadoc-port)))
+    (dynadoc :port 5000)))
 
