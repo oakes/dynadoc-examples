@@ -1,7 +1,6 @@
 (set-env!
   :source-paths #{"src"}
-  :dependencies '[[org.clojure/clojurescript "1.9.946" :scope "test"]
-                  [dynadoc "1.0.0"]])
+  :dependencies '[[dynadoc "1.1.1"]])
 
 (require
   '[basic-boot-clj.core]
