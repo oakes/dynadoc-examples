@@ -5,7 +5,7 @@
                   [org.clojure/test.check "0.9.0" :scope "test"]
                   [org.clojure/clojurescript "1.9.946" :scope "test"]
                   [reagent "0.8.0-alpha2"]
-                  [dynadoc "1.1.1"]])
+                  [dynadoc "1.1.2"]])
 
 (require
   '[adzerk.boot-cljs :refer [cljs]]
