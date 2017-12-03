@@ -1,4 +1,4 @@
-(ns basic-boot-cljs.core
+(ns basic-boot-clj.core
   (:require [clojure.string :as str]
             [dynadoc.example :refer [defexample defexamples]]))
 
