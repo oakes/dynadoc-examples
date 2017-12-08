@@ -1,5 +1,5 @@
 (defproject basic-lein-clj "0.1.0-SNAPSHOT"
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
                  [dynadoc "1.1.5"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[dynadoc/lein-dynadoc "1.1.5"]]
