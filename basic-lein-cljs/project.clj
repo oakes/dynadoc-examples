@@ -18,7 +18,8 @@
                         :compiler {:main "basic-lein-cljs.core"
                                    :optimizations :none
                                    :asset-path "/out"
-                                   :output-to "resources/dynadoc-extend/main.js"}}]}
+                                   :output-to "resources/dynadoc-extend/main.js"
+                                   :output-dir "resources/dynadoc-extend/out"}}]}
   :source-paths ["src" "target/classes"]
   :resource-paths ["resources"]
   :clean-targets ["out" "release"]
