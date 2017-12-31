@@ -5,12 +5,20 @@
                  [dynadoc "1.2.0"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[lein-cljsbuild "1.1.7"]
+            [lein-figwheel "0.5.14"]
             [dynadoc/lein-dynadoc "1.2.0"]]
-  :cljsbuild {:builds [
-                       {:source-paths ["src"]
-                        :compiler {:output-to "resources/dynadoc-extend/main.js"
-                                   :optimizations :simple}}
-                       ]}
+  :cljsbuild {:builds [{:id "prod"
+                        :source-paths ["src"]
+                        :compiler {:main "basic-lein-cljs.core"
+                                   :optimizations :simple
+                                   :output-to "resources/dynadoc-extend/main.js"}}
+                       {:id "dev"
+                        :source-paths ["src"]
+                        :figwheel {:on-jsload "dynadoc.core/reload"}
+                        :compiler {:main "basic-lein-cljs.core"
+                                   :optimizations :none
+                                   :asset-path "/out"
+                                   :output-to "resources/dynadoc-extend/main.js"}}]}
   :source-paths ["src" "target/classes"]
   :resource-paths ["resources"]
   :clean-targets ["out" "release"]
