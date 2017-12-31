@@ -2,10 +2,10 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.9.946"]
                  [reagent "0.8.0-alpha2"]
-                 [dynadoc "1.1.6"]]
+                 [dynadoc "1.2.0"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[lein-cljsbuild "1.1.7"]
-            [dynadoc/lein-dynadoc "1.1.6"]]
+            [dynadoc/lein-dynadoc "1.2.0"]]
   :cljsbuild {:builds [
                        {:source-paths ["src"]
                         :compiler {:output-to "resources/dynadoc-extend/main.js"
