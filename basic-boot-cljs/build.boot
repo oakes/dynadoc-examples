@@ -5,7 +5,7 @@
                   [org.clojure/test.check "0.9.0" :scope "test"]
                   [org.clojure/clojurescript "1.9.946" :scope "test"]
                   [reagent "0.8.0-alpha2"]
-                  [dynadoc "1.2.1"]])
+                  [dynadoc "1.3.0"]])
 
 (require
   '[adzerk.boot-cljs :refer [cljs]]
@@ -16,9 +16,7 @@
   (set-env! :resource-paths #{"dev-resources"})
   (comp
     (watch)
-    (reload
-      :on-jsload 'dynadoc.core/reload
-      :asset-path "dynadoc-extend")
+    (reload :asset-path "dynadoc-extend")
     (cljs
       :optimizations :none ; replace :none with :simple to enable exporting
       :compiler-options {:asset-path "/main.out"})
