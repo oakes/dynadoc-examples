@@ -1,6 +1,6 @@
 (set-env!
   :source-paths #{"src"}
-  :dependencies '[[dynadoc "1.3.0"]])
+  :dependencies '[[dynadoc "1.4.0"]])
 
 (require
   '[basic-boot-clj.core]

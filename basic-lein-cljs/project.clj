@@ -2,11 +2,11 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.9.946"]
                  [reagent "0.8.0-alpha2"]
-                 [dynadoc "1.3.0"]]
+                 [dynadoc "1.4.0"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.14"]
-            [dynadoc/lein-dynadoc "1.3.0"]]
+            [dynadoc/lein-dynadoc "1.4.0"]]
   :cljsbuild {:builds [{:id "prod"
                         :source-paths ["src"]
                         :compiler {:main "basic-lein-cljs.core"

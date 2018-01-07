@@ -20,3 +20,13 @@
   (reagent.core/render-component focus card)
   nil)
 
+(defn call-fn-after-delay
+  "Runs the given function after a three second delay."
+  [thunk]
+  (js/setTimeout thunk 3000))
+
+(defexample call-fn-after-delay
+  {:doc "This is an example of how to display a value that is asynchronous."
+   :with-callback callback}
+  (call-fn-after-delay (fn [] (callback "Hello world!"))))
+

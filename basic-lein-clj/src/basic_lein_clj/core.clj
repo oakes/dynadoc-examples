@@ -13,6 +13,18 @@
 (defexample get-extension
   (get-extension "myfile.txt"))
 
+(defn call-fn-after-delay
+  "Runs the given function after a three second delay."
+  [thunk]
+  (future
+    (Thread/sleep 3000)
+    (thunk)))
+
+(defexample call-fn-after-delay
+  {:doc "This is an example of how to display a value that is asynchronous."
+   :with-callback callback}
+  (call-fn-after-delay (fn [] (callback "Hello world!"))))
+
 (defexamples clojure.core/conj
   ["Add a name to a vector"
    (conj ["Alice" "Bob"] "Charlie")]
