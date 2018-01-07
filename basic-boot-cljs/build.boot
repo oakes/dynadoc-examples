@@ -4,11 +4,10 @@
                   [adzerk/boot-reload "0.5.2" :scope "test"]
                   [org.clojure/test.check "0.9.0" :scope "test"]
                   [org.clojure/clojurescript "1.9.946" :scope "test"]
-                  [reagent "0.8.0-alpha2"] [nightlight "2.1.1" :scope "test"]
+                  [reagent "0.8.0-alpha2"]
                   [dynadoc "1.4.0"]])
 
 (require
-  '[nightlight.boot :refer [nightlight]]
   '[adzerk.boot-cljs :refer [cljs]]
   '[adzerk.boot-reload :refer [reload]]
   '[dynadoc.boot :refer [dynadoc]])
@@ -21,6 +20,5 @@
     (cljs
       :optimizations :none ; replace :none with :simple to enable exporting
       :compiler-options {:asset-path "/main.out"})
-    (nightlight :port 4000)
-    (dynadoc :port 5001)))
+    (dynadoc :port 5000)))
 
