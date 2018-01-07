@@ -1,7 +1,9 @@
 (ns basic-lein-cljs.core
   (:require [reagent.core :as r]
+            [goog.object :as gobj]
             [dynadoc.core])
-  (:require-macros [dynadoc.example :refer [defexample]]))
+  (:require-macros [dynadoc.example :refer [defexample]])
+  (:import goog.net.XhrIo))
 
 (defn clicks
   "Shows the number of times the user clicked the button."
@@ -21,13 +23,24 @@
   (reagent.core/render-component focus card)
   nil)
 
-(defn call-fn-after-delay
-  "Runs the given function after a three second delay."
-  [thunk]
-  (js/setTimeout thunk 3000))
+(defn get-lib-version
+  "Queries Clojars for the version of the given library, providing it in a
+  callback. If it can't find it, the callback receives an error object."
+  [lib-name callback]
+  (.send XhrIo
+    (str "https://clojars.org/api/artifacts/" lib-name)
+    (fn [e]
+      (callback
+        (or (when (.isSuccess (.-target e))
+              (-> e
+                  .-target
+                  .getResponseText
+                  js/JSON.parse
+                  (gobj/get "latest_release")))
+            (js/Error. (str "Can't find version for: " lib-name)))))
+    "GET"))
 
-(defexample call-fn-after-delay
-  {:doc "This is an example of how to display a value that is asynchronous."
-   :with-callback callback}
-  (call-fn-after-delay (fn [] (callback "Hello world!"))))
+(defexample get-lib-version
+  {:with-callback callback}
+  (get-lib-version "dynadoc" callback))
 
