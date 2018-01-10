@@ -1,6 +1,6 @@
 (set-env!
   :source-paths #{"src"}
-  :dependencies '[[dynadoc "1.4.1"]
+  :dependencies '[[dynadoc "1.4.2"]
                   [org.clojure/data.json "0.2.6"]])
 
 (require
