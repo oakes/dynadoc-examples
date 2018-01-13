@@ -1,6 +1,7 @@
 (set-env!
   :source-paths #{"src"}
-  :dependencies '[[dynadoc "1.4.2"]
+  :dependencies '[[dynadoc "RELEASE"]
+                  [javax.xml.bind/jaxb-api "2.3.0" :scope "test"] ; necessary for Java 9 compatibility
                   [org.clojure/data.json "0.2.6"]])
 
 (require
