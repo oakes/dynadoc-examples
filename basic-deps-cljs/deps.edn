@@ -1,0 +1,7 @@
+{:paths ["src"]
+ :deps {reagent {:mvn/version "0.8.1"}}
+ :aliases {:docs {:extra-deps {dynadoc {:mvn/version "RELEASE"}
+                               org.clojure/clojurescript {:mvn/version "1.10.764"}
+                               com.bhauman/figwheel-main {:mvn/version "0.2.11"}}
+                  :extra-paths ["dev-resources"]
+                  :main-opts ["docs.clj"]}}}

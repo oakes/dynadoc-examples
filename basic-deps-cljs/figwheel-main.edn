@@ -1,0 +1,2 @@
+{:open-url "http://localhost:5000/cljs/basic-deps-cljs.core"
+ :clean-outputs true}

@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps {org.clojure/data.json {:mvn/version "0.2.6"}}
+ :aliases {:docs {:extra-deps {dynadoc {:mvn/version "RELEASE"}}
+                  :main-opts ["docs.clj"]}}}
