@@ -1,7 +1,8 @@
 (ns basic-lein-cljs.core
   (:require [reagent.core :as r]
             [goog.object :as gobj]
-            [dynadoc.core])
+            ;; must require dynadoc.core so dynadoc's frontend can be built
+            dynadoc.core)
   (:require-macros [dynadoc.example :refer [defexample]])
   (:import goog.net.XhrIo))
 

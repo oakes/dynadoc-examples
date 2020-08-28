@@ -1,1 +1,1 @@
-{:require  [basic-boot-cljs.core dynadoc.core]}
+{:require  [basic-boot-cljs.core]}

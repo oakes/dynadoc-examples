@@ -1,6 +1,8 @@
 (ns basic-boot-cljs.core
   (:require [reagent.core :as r]
-            [goog.object :as gobj])
+            [goog.object :as gobj]
+            ;; must require dynadoc.core so dynadoc's frontend can be built
+            dynadoc.core)
   (:require-macros [dynadoc.example :refer [defexample]])
   (:import goog.net.XhrIo))
 

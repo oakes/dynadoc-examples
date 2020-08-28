@@ -1,5 +1,6 @@
 (ns basic-deps-cljs.docs
   (:require [basic-deps-cljs.core :refer [clicks get-lib-version]]
+            ;; must require dynadoc.core so dynadoc's frontend can be built
             dynadoc.core)
   (:require-macros [dynadoc.example :refer [defexample]]))
 
