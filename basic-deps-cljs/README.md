@@ -1,1 +1,1 @@
-Do `clj -A:docs` to start Dynadoc.
+Do `clj -M:docs` to start Dynadoc.
