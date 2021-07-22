@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@notjosh/rangy-core": "^3.0.1",
+    "@notjosh/rangy-textrange": "^3.0.1",
+    "create-react-class": "^15.7.0",
+    "parinfer": "^3.12.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

@@ -1,0 +1,6 @@
+{:deps     {:aliases [:docs]}
+ :builds   {:main
+            {:target        :browser
+             :output-dir    "dev-resources/dynadoc-extend"
+             :release {:compiler-options {:optimizations :simple}}
+             :modules {:main {:entries [basic-shadow-cljs.docs]}}}}}
